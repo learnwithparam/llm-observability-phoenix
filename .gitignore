@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.env
+.venv/
+data/raw/
+data/*.db
+data/faiss_index/
+mlruns/
+.DS_Store
+*.log

@@ -1,0 +1,15 @@
+services:
+  app:
+    build: .
+    container_name: llm-observability-phoenix
+    volumes:
+      - .:/app
+      - /app/.venv
+    env_file:
+      - .env
+    restart: "no"
+    stdin_open: true
+    tty: true
+    ports:
+      - "6006:6006"  # Arize Phoenix UI
+      - "5000:5000"  # MLflow UI
